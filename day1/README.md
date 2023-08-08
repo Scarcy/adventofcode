@@ -7,7 +7,7 @@ Each item was seperated by a newline, and each there was a blank line seperation
 Find the elf with the highest sum of calories. I solved this by first reading from the file and summing up each elves calories and adding it to an array.
 Each array entry was then a sum of the calories. To find the largest I decided to do this:
 
-``c
+```c
   int highestCalorieIndex = 0;
   for (int i = 0; i < elfCount; i++) {
 
@@ -16,7 +16,7 @@ Each array entry was then a sum of the calories. To find the largest I decided t
     }
   }
 
-``
+```
 This loop stored the index of the currently largest sum, and compared each item to the value. This made it so that I got the largest sum.
 
 
