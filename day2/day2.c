@@ -11,6 +11,7 @@ int main() {
   char opponentsChoices[2600];
   char yourChoices[2600];
   int score = 0;
+  int score2 = 0;
   char line[10];
   int index = 0;
   while (fgets(line, sizeof(line), file) != NULL) {
@@ -72,7 +73,58 @@ int main() {
       else if (yc == 'Z')
         score += 3;
     }
+
+    // Part 2
+    // X = Lose, Y = Draw, Z = Win
+    switch (oc) {
+    case 'A':
+      switch (yc) {
+      case 'X':
+        score2 += 3;
+        break;
+      case 'Y':
+        score2 += 4;
+        break;
+      case 'Z':
+        score2 += 8;
+        break;
+      default:
+        break;
+      }
+      break; // Add this
+    case 'B':
+      switch (yc) {
+      case 'X':
+        score2 += 1;
+        break;
+      case 'Y':
+        score2 += 5;
+        break;
+      case 'Z':
+        score2 += 9;
+        break;
+      default:
+        break;
+      }
+      break; // Add this
+    case 'C':
+      switch (yc) {
+      case 'X':
+        score2 += 2;
+        break;
+      case 'Y':
+        score2 += 6;
+        break;
+      case 'Z':
+        score2 += 7;
+        break;
+      default:
+        break;
+      }
+      break; // This is correct
+    }
   }
   printf("Your score is: %d\n", score);
+  printf("Your score following the guide is: %d\n", score2);
   return 0;
 }
