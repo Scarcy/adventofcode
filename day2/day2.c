@@ -91,7 +91,7 @@ int main() {
       default:
         break;
       }
-      break; // Add this
+      break;
     case 'B':
       switch (yc) {
       case 'X':
@@ -106,7 +106,7 @@ int main() {
       default:
         break;
       }
-      break; // Add this
+      break;
     case 'C':
       switch (yc) {
       case 'X':
@@ -121,7 +121,7 @@ int main() {
       default:
         break;
       }
-      break; // This is correct
+      break;
     }
   }
   printf("Your score is: %d\n", score);
