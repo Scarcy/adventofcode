@@ -6,6 +6,7 @@ int main() {
   FILE *file = fopen("guide.txt", "r");
   if (!file) {
     perror("Error opening the file");
+    return EXIT_FAILURE;
   }
   char opponentsChoices[2600];
   char yourChoices[2600];
